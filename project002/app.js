@@ -7,6 +7,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var User = require('./models/user.js');
 var NodeGeocoder = require('node-geocoder');
+var myKey = key.MY_KEY;
+var secretKey = key.SECRET_KEY;
 
 mongoose.connect('mongodb://localhost/project002');
 
@@ -77,7 +79,7 @@ var options = {
 
   // Optional depending on the providers
   httpAdapter: 'https', // Default
-  apiKey: 'AIzaSyB5rkFbWBDA71KkFMCwiPvES7IDu6Zwoqk', // for Mapquest, OpenCage, Google Premier
+  apiKey: 'myKey', // for Mapquest, OpenCage, Google Premier
   formatter: null         // 'gpx', 'string', ...
 };
 var geocoder = NodeGeocoder(options);
